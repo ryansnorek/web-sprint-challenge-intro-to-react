@@ -5,9 +5,9 @@ import Character from './components/Character'
 
 const App = () => {
   // Set character state
-  const [characters, setCharacters] = useState('')
+  const [characters, setCharacters] = useState([])
 
-  // Get api data and sync to characters state
+  // Get api data
   useEffect(() => {
     axios.get('https://swapi.dev/api/people')
       .then(res => {
@@ -16,6 +16,8 @@ const App = () => {
       })
       .catch(err => console.log(`Error: ${err}`))
   }, [])
+
+  
   
   return (
     <div className="App">
