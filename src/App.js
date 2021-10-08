@@ -12,16 +12,16 @@ const App = () => {
     axios.get('https://swapi.dev/api/people')
       .then(res => {
         setCharacters(res.data)
+        console.log(res.data)
       })
       .catch(err => console.log(`Error: ${err}`))
-  }, [characters])
+  }, [])
   
-
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      {/* Pass characters state props to the Character component */}
-      <Character characters={characters} setCharacter={setCharacters} />
+      {/* map over list of characters and mount a component for each character */}
+      {characters.map(character => <Character character={character}/>)}
     </div>
   );
 }
