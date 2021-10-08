@@ -79,6 +79,17 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Put your answers underneath the questions:
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
-1. Describe component state.
-1. Describe props.
-1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+  React is a js library that can be used to build front end components. It solves the problem of reloading the entire DOM on every render by creating a virtual DOM and targeting only the component that needs rendering. This helps reduce the load on the server. React also simplifies DOM targeting and has a number of 'hooks' that make life easier for developers. 
+
+2. Describe component state.
+
+  State is what is currently displayed on the page and allows dynamic interaction from the user. The component can have many slices of state held by different variables.
+
+3. Describe props.
+
+  Props or properties are arguments that can be shared with other components. They are defined in a parent component and can be passed to an unlimited number of child components.
+
+4. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+  Side effects are exactly what they sound like. If a user clicks a button and it fires a change on another element or alters styles then it is a side effect of the button click. Similar to an event listener, the useEffect hook can sync an action to an event by inserting the variable that is being watched in the second argument, an array. An empty array means it only fires once when the component is being mounted.
