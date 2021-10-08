@@ -7,10 +7,11 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
   button {
     background-color: black;
-    color: #FFE81F;
+    color: #8fce00;
+    box-shadow: 2px 1px 2px #4f4f4f;
   }
   button:hover {
-    text-shadow: 0 0 5px #fff;
+    text-shadow: 0 0 1px #8fce00;
   }
 `
 

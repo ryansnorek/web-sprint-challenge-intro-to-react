@@ -5,7 +5,7 @@ export default function Features(props) {
 
     return (
         <div>
-            <p>{character.birth_year}</p>
+            <p>Birth year: {character.birth_year}</p>
         </div>
     )
 }
