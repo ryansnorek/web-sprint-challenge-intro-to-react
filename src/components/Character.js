@@ -2,12 +2,11 @@ import React from 'react'
 
 export default function Character(props) {
     // Destructure character props
-    const { character, setCharacter } = props
+    const { characters, setCharacters } = props
 
-    
     return (
         <div>
-            
+            {/* Map over characters */}
         </div>
     )
 }

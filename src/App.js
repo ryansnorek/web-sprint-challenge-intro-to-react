@@ -5,23 +5,23 @@ import Character from './components/Character'
 
 const App = () => {
   // Set character state
-  const [character, setCharacter] = useState('')
+  const [characters, setCharacters] = useState('')
 
-  // Get api data and sync to character state
+  // Get api data and sync to characters state
   useEffect(() => {
     axios.get('https://swapi.dev/api/people')
       .then(res => {
-        console.log(res.data)
+        setCharacters(res.data)
       })
       .catch(err => console.log(`Error: ${err}`))
-  }, [character])
+  }, [characters])
   
 
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      {/* Pass character state props to the Character component */}
-      <Character character={character} setCharacter={setCharacter} />
+      {/* Pass characters state props to the Character component */}
+      <Character characters={characters} setCharacter={setCharacters} />
     </div>
   );
 }
