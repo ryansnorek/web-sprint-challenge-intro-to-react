@@ -11,8 +11,7 @@ const FlexWrapper = styled.div`
     }
     .right {
         width: 60%;
-        text-align: right;
-        margin-right: 20%;
+        margin-right: 6%;
     }
 `
 
@@ -27,6 +26,7 @@ export default function Character(props) {
     function toggleDetails() {
         setVisibility(!visibility)
     }
+
     return (
         <FlexWrapper>
             <div className="container">

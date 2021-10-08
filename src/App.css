@@ -1,6 +1,5 @@
 .App {
   text-align: left;
-  
 }
 .Header {
   /* color: #443e3e; */
@@ -20,6 +19,7 @@ h1 {
 body {
   background-image: url('./images/rm-bg.jpg');
 }
+
 
 h2, button, p {
   margin-left: 3%;
