@@ -36,7 +36,7 @@ const App = () => {
       <div className="App">
         <h1 className="Header">Characters</h1>
         {/* map over list of characters and mount a component for each character */}
-        {characters.map(character => <Character character={character}/>)}
+        {characters.map((character ,idx) => <Character key={idx}character={character}/>)}
       </div>
     </Wrapper>
   );
