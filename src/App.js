@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios'
+import Character from './components/Character'
 
 const App = () => {
   // Set character state
@@ -10,7 +11,7 @@ const App = () => {
   useEffect(() => {
     axios.get('https://swapi.dev/api/people')
       .then(res => {
-        console.log(res)
+        console.log(res.data)
       })
       .catch(err => console.log(`Error: ${err}`))
   }, [character])
@@ -19,6 +20,8 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      {/* Pass character state props to the Character component */}
+      <Character character={character} setCharacter={setCharacter} />
     </div>
   );
 }
