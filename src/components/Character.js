@@ -10,8 +10,8 @@ export default function Character(props) {
 
     return (
         <div>
-            <button>{character.name}</button>
-            <Details character={character}/>
+            <h2>{character.name}</h2>
+            <button>Show Details</button>
             {/* {visibility && <Details character={character}/>} */}
         </div>
     )

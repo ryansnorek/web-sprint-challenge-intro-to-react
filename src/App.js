@@ -2,6 +2,17 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios'
 import Character from './components/Character'
+import styled from 'styled-components'
+
+const Wrapper = styled.div`
+  button {
+    background-color: black;
+    color: #FFE81F;
+  }
+  button:hover {
+    text-shadow: 0 0 5px #fff;
+  }
+`
 
 const App = () => {
   // Set character state
@@ -20,11 +31,13 @@ const App = () => {
   
   
   return (
-    <div className="App">
-      <h1 className="Header">Characters</h1>
-      {/* map over list of characters and mount a component for each character */}
-      {characters.map(character => <Character character={character}/>)}
-    </div>
+    <Wrapper>
+      <div className="App">
+        <h1 className="Header">Characters</h1>
+        {/* map over list of characters and mount a component for each character */}
+        {characters.map(character => <Character character={character}/>)}
+      </div>
+    </Wrapper>
   );
 }
 
